@@ -31,7 +31,7 @@ Using NUGET package: System.IdentityModel.Tokens.Jwt
                 items.Add(item);
             }
 	    
- [Authentication system please look HERE](src/Asp.Net.Core.Cognito/Asp.Net.Core.Cognito.Users/CognitoAuthentication.cs)	    
+ [More details, please look HERE](src/Asp.Net.Core.Cognito/Asp.Net.Core.Cognito.Users/CognitoAuthentication.cs)	    
 
 Copyright (C) 2019 by Vladimir Novick http://www.linkedin.com/in/vladimirnovick , 
 
