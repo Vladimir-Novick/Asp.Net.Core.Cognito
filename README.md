@@ -5,6 +5,33 @@ Authentication in ASP.NET Core Web API with Amazon Cognito
 Amazon Cognito is the user management and authentication product in AWS. 
 This is example how the Amazon Cognito can be integrated into your ASP.NET.CORE application. 
 
+### Verifying a JSON Web Token 
+
+Using NUGET package: System.IdentityModel.Tokens.Jwt
+
+	   var jwtToken = new JwtSecurityToken(token);
+       	   DateTime validDateTime = jwtToken.ValidTo;	
+       
+### Get Paiload info by name 
+	   var jwtToken = new JwtSecurityToken(token);
+	   var value =  jwtToken.Payload["userInfo"].ToString();
+	   
+	   
+### Get all Claim information (c#)
+
+         var jwtToken = new JwtSecurityToken(token);
+         List<ClaimItem> items = new List<ClaimItem>();
+         foreach (var claim in jwtToken.Claims)
+            {
+                ClaimItem item = new ClaimItem()
+                {
+                    Key = claim.Type,
+                    Value = claim.Value
+                };
+                items.Add(item);
+            }
+	    
+	    
 
 Copyright (C) 2019 by Vladimir Novick http://www.linkedin.com/in/vladimirnovick , 
 
