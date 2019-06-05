@@ -73,6 +73,7 @@ namespace Asp.Net.Core.Cognito.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 
@@ -97,6 +98,7 @@ namespace Asp.Net.Core.Cognito.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 
@@ -121,6 +123,7 @@ namespace Asp.Net.Core.Cognito.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 
@@ -140,6 +143,7 @@ namespace Asp.Net.Core.Cognito.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 
@@ -155,10 +159,11 @@ namespace Asp.Net.Core.Cognito.Controllers
             try
             {
                 var ret = (new CognitoUserManager()).UpdateAttributes(request);
-                if (ret != null) return Ok(ret);
+                if (ret ) return Ok(ret);
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 
@@ -178,6 +183,7 @@ namespace Asp.Net.Core.Cognito.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 response = new BadRequestResult();
             }
 

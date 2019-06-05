@@ -247,7 +247,7 @@ namespace Asp.Net.Core.Cognito.Users
                 throw new CognitoServiceException("Failed to find the Cognito User by userName", e);
             }
 
-            return null;
+          
         }
 
         public bool DeleteUser(string userName)
@@ -323,6 +323,7 @@ namespace Asp.Net.Core.Cognito.Users
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 throw;
             }
             return ret;
@@ -458,6 +459,7 @@ namespace Asp.Net.Core.Cognito.Users
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.Message);
                     throw;
                 }
 
