@@ -2,13 +2,10 @@
 
 namespace Asp.Net.Core.Cognito.Users.Models
 {
-    public class LoginViewModel
+    public class ApiLoginRequest
     {
-        [Required]
-        public string User { get; set; }
+        public string UserName { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

@@ -14,11 +14,32 @@ namespace Asp.Net.Core.Cognito
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            IConfigurationRoot config;
+
+            string baseDir = Directory.GetCurrentDirectory();
+
+            config = new ConfigurationBuilder()
+            .SetBasePath(baseDir)
+            .AddJsonFile("config" + Path.DirectorySeparatorChar + "hosting.json", false)
+            .Build();
+
+            string url = config.GetValue<string>("server.urls");
+
+            CreateWebHostBuilder(args)
+                .UseUrls(url)
+                .Build()
+                .Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+               .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                     config.SetBasePath(Directory.GetCurrentDirectory());
+                     config.AddJsonFile(
+                       "config" + Path.DirectorySeparatorChar + "cognito_config.json", optional: false, reloadOnChange: false);
+                     config.AddCommandLine(args);
+                })
                 .UseStartup<Startup>();
     }
 }

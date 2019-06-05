@@ -1,9 +1,0 @@
-{
-  "Cognito": {
-    "poolID": "eu-west-1_12345678yuiop",
-    "clientID": "1234567890yuiop",
-    "clientSecret": "12345678901234567890zxcvbn",
-    "awsAccessKeyId": "123456789012345678qwertyu",
-    "awsSecretAccessKey": "123456789lkjhgfdsa"
-  }
-}

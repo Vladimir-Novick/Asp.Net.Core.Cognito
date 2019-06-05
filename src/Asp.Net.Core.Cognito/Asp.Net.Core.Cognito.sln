@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.Net.Core.Cognito", "Asp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.Net.Core.Cognito.Users", "Asp.Net.Core.Cognito.Users\Asp.Net.Core.Cognito.Users.csproj", "{0B3E87EA-5EBF-40CF-9B6E-984432277933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{B3840E7B-48FE-4EB0-8B1E-6FFDAAAD4519}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{B3840E7B-48FE-4EB0-8B1E-6FFDAAAD4519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

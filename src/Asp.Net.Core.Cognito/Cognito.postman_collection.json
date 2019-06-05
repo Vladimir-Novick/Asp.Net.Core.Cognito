@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "bf6d3146-7deb-44b5-81e0-1959be3615ae",
+		"name": "Cognito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Customer-Ip",
+						"value": "81.218.138.93",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"UserName\": \"admin\",\n\"Password\": \"!QAZxsw2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/SignIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"SignIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI2MGZhNmU4Zi04NmFkLTExZTktYmIyZS01MTYwODNhY2EzMzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTQ4MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTA4MiwiaWF0IjoxNTU5NjQxNDgyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.K6ewyDy6dTqQSFJ9msa0IHle4kSq5BbUfJp7kzF-zL9Bsr39flRMVxjbHxzkaI6u33NDZ2VvnAec4gsogAb9UWK9ImoQWCT0VBKTnt9XZMqprDf6N1vOWJbk9Pzp61xbgbJ48mlho6mLdUK56Madv4UWlIEd9HIyhzBZpN3u9fNkkUNRP2MU4XZuwJ4vk7YJtSi0xD--TGdAkOCgNxRdo51VfRx41stJrPX-7Zl6M8vBJEJF6zNeY7yXS0Oh4BMd0byJuLAW3hCwTU7RsZ9wgJudyeU8UM9eFQSLSBoaW3mRLCPnTDlD9YvVgMauvOrTH1RQrDvQ0jNguTLo7eYyqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\":\"vlad_api2\",\n\"password\":\"!QAZxsw2\",\n\"eMail\":\"vlad.novick@gmail.com\",\n\"Attributes\":{\n    \"custom:dep_id\":\"123\",\n    \"custom:brh_id\":\"4567\"\n   }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI2MGZhNmU4Zi04NmFkLTExZTktYmIyZS01MTYwODNhY2EzMzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTQ4MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTA4MiwiaWF0IjoxNTU5NjQxNDgyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.K6ewyDy6dTqQSFJ9msa0IHle4kSq5BbUfJp7kzF-zL9Bsr39flRMVxjbHxzkaI6u33NDZ2VvnAec4gsogAb9UWK9ImoQWCT0VBKTnt9XZMqprDf6N1vOWJbk9Pzp61xbgbJ48mlho6mLdUK56Madv4UWlIEd9HIyhzBZpN3u9fNkkUNRP2MU4XZuwJ4vk7YJtSi0xD--TGdAkOCgNxRdo51VfRx41stJrPX-7Zl6M8vBJEJF6zNeY7yXS0Oh4BMd0byJuLAW3hCwTU7RsZ9wgJudyeU8UM9eFQSLSBoaW3mRLCPnTDlD9YvVgMauvOrTH1RQrDvQ0jNguTLo7eYyqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\":\"vlad\",\n\"Attributes\":{\n    \"custom:dep_id\":\"123\",\n    \"custom:brh_id\":\"4567\"\n   }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI2MGZhNmU4Zi04NmFkLTExZTktYmIyZS01MTYwODNhY2EzMzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTQ4MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTA4MiwiaWF0IjoxNTU5NjQxNDgyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.K6ewyDy6dTqQSFJ9msa0IHle4kSq5BbUfJp7kzF-zL9Bsr39flRMVxjbHxzkaI6u33NDZ2VvnAec4gsogAb9UWK9ImoQWCT0VBKTnt9XZMqprDf6N1vOWJbk9Pzp61xbgbJ48mlho6mLdUK56Madv4UWlIEd9HIyhzBZpN3u9fNkkUNRP2MU4XZuwJ4vk7YJtSi0xD--TGdAkOCgNxRdo51VfRx41stJrPX-7Zl6M8vBJEJF6zNeY7yXS0Oh4BMd0byJuLAW3hCwTU7RsZ9wgJudyeU8UM9eFQSLSBoaW3mRLCPnTDlD9YvVgMauvOrTH1RQrDvQ0jNguTLo7eYyqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"UserName\":\"vlad_api\",\n\"PreviewPassword\":\"!QAZxsw2\",\n\"NewPassword\":\"QAZxsw2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/ChangePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"ChangePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminSetPassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI3ZWMyZDVkNS04NmFlLTExZTktOGVhMC1jN2VmZmNiNjAwMDciLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTk2MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTU2MiwiaWF0IjoxNTU5NjQxOTYyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.EPAxBNPypJDM8il3KFAwBm0NhCT_dN9gt-jex0GgxQutSj0MdtHOA8L9MbKXfVBZqooX7Xkfz8DhVforf_pCnwGPBxCovthT4uylegzdqzBsbVXhZhD_PY9Fzvf5GKSws9bYVIrPcSY_6TZtv1aCRjH_V5Mr0IBopS2ieJTBkFlaSD2BOWHWIIVQuVLIE5HDJSKLgbv3rKx31j50sN58DX2pEeT9eaaUn3QIWqI6abLuM-0rJpw5NWobf1PWGa-bwvu5nzz4r6X0J4uSsKnck31aE40w-xfuD6r7ECNBCjZ6oG0SuN9-Ypj-DUfcaNd5Y8nY3XYXVlqWx4HJI7Yl9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\":\"vlad_api\",\n\"Password\":\"!QAZxsw2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/AdminSetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"AdminSetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI2MGZhNmU4Zi04NmFkLTExZTktYmIyZS01MTYwODNhY2EzMzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTQ4MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTA4MiwiaWF0IjoxNTU5NjQxNDgyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.K6ewyDy6dTqQSFJ9msa0IHle4kSq5BbUfJp7kzF-zL9Bsr39flRMVxjbHxzkaI6u33NDZ2VvnAec4gsogAb9UWK9ImoQWCT0VBKTnt9XZMqprDf6N1vOWJbk9Pzp61xbgbJ48mlho6mLdUK56Madv4UWlIEd9HIyhzBZpN3u9fNkkUNRP2MU4XZuwJ4vk7YJtSi0xD--TGdAkOCgNxRdo51VfRx41stJrPX-7Zl6M8vBJEJF6zNeY7yXS0Oh4BMd0byJuLAW3hCwTU7RsZ9wgJudyeU8UM9eFQSLSBoaW3mRLCPnTDlD9YvVgMauvOrTH1RQrDvQ0jNguTLo7eYyqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\":\"vlad_api2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/DeleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"DeleteUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJEN0xGZ0pQRFwvV2I5ZW9MdTN6bWxJS0toOFB0OUtQMDBzVGZmNUFJbWVyaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiOGY3NmYwZS0zZmMzLTRkMDEtODI2NS02MTI4ZDAwYjI3MWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbiJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtd2VzdC0xLmFtYXpvbmF3cy5jb21cL2V1LXdlc3QtMV93ZWdQZG9VQ3QiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoiYWRtaW4iLCJjb2duaXRvOnJvbGVzIjpbImFybjphd3M6aWFtOjo0OTAwNDE1OTk4Nzk6cm9sZVwvYWRtaW5fcm9sZV9jb2duaXRvIl0sImF1ZCI6IjEybjM1aHN0YWxoa2pwbXQyaTA4dHI4cmUxIiwiZXZlbnRfaWQiOiI2MGZhNmU4Zi04NmFkLTExZTktYmIyZS01MTYwODNhY2EzMzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1OTY0MTQ4MiwicGhvbmVfbnVtYmVyIjoiKzkxMjU0NDQ5NzExMSIsImV4cCI6MTU1OTY0NTA4MiwiaWF0IjoxNTU5NjQxNDgyLCJlbWFpbCI6InZsYWQubm92aWNrQGdtYWlsLmNvbSJ9.K6ewyDy6dTqQSFJ9msa0IHle4kSq5BbUfJp7kzF-zL9Bsr39flRMVxjbHxzkaI6u33NDZ2VvnAec4gsogAb9UWK9ImoQWCT0VBKTnt9XZMqprDf6N1vOWJbk9Pzp61xbgbJ48mlho6mLdUK56Madv4UWlIEd9HIyhzBZpN3u9fNkkUNRP2MU4XZuwJ4vk7YJtSi0xD--TGdAkOCgNxRdo51VfRx41stJrPX-7Zl6M8vBJEJF6zNeY7yXS0Oh4BMd0byJuLAW3hCwTU7RsZ9wgJudyeU8UM9eFQSLSBoaW3mRLCPnTDlD9YvVgMauvOrTH1RQrDvQ0jNguTLo7eYyqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5011/Api/GetUserList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5011",
+					"path": [
+						"Api",
+						"GetUserList"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

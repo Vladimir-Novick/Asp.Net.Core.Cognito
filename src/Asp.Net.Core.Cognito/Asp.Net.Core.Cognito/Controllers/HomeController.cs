@@ -15,34 +15,7 @@ namespace Asp.Net.Core.Cognito.Controllers
         {
             return View();
         }
-        [Produces("application/json")]
-        [Route("api/Token")]
-        [Authorize]
-        public class TokenController : Controller
-        {
-            // GET: api/Token
-            [HttpGet]
-            public string Get()
-            {
-                string exp = User.Claims.Where(c => c.Type == "exp").First().Value;
-                return "Your token is valid until " + (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).AddSeconds(Double.Parse(exp)).ToString();
-            }
-        }
 
-        [Authorize]
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
 
         public IActionResult Privacy()
         {

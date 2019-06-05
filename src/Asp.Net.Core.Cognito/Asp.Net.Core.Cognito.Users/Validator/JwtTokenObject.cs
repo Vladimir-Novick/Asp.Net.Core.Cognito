@@ -1,12 +1,9 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Cryptography;
-using System.Security.Claims;
-using System.Text;
-using System.Linq;
 using Asp.Net.Core.Cognito.Users.Excepotions;
 using Asp.Net.Core.Cognito.Users.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Asp.Net.Core.Cognito.Users.Validator
 {
@@ -29,11 +26,13 @@ namespace Asp.Net.Core.Cognito.Users.Validator
                 throw new TokenNotValid(ex.Message,ex.StackTrace);
             }
         }
-
+        /// <summary>
+        ///     Gets the 'expiration' datetime converted to a System.DateTime,  UnixEpoch (UTC 1970-01-01T0:0:0Z). 
+        /// </summary>
+        /// <returns></returns>
         public DateTime GetValidDate()
         {
-            DateTime validDateTime = jwtToken.ValidTo;
-            return validDateTime;
+             return jwtToken.ValidTo;
         }
 
 
@@ -60,6 +59,13 @@ namespace Asp.Net.Core.Cognito.Users.Validator
             return items;
         }
 
+        public bool IsValidDate()
+        {
+            var validDate = GetValidDate();
+            if (validDate > DateTime.Now) return false;
+            return true;
+        }
+
         public List<PayloadItem> GetClaims()
         {
             List<PayloadItem> items = new List<PayloadItem>();
@@ -77,13 +83,13 @@ namespace Asp.Net.Core.Cognito.Users.Validator
             return items;
         }
 
-        public static string VerifyJWT(string token)
+        public Dictionary<string,string> GetProperties()
         {
+          var items = new Dictionary<String, String>();
+            return jwtToken.Claims.ToDictionary(x => x.Type, x => x.Value);
 
-            var jwtToken = new JwtSecurityToken(token);
-
-            return String.Empty;
         }
+
 
     }
 }

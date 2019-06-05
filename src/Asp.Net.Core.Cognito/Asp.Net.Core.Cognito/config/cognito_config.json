@@ -1,9 +1,13 @@
 {
-  "Cognito": {
-    "poolID": "eu-west-1_12345678yuiop",
-    "clientID": "1234567890yuiop",
-    "clientSecret": "12345678901234567890zxcvbn",
-    "awsAccessKeyId": "123456789012345678qwertyu",
-    "awsSecretAccessKey": "123456789lkjhgfdsa"
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AWS": {
+    "Region": "eu-west-1",
+    "UserPoolClientId": "123456789",
+    "UserPoolClientSecret": "dddddddddddddddddddddddddddddddddd",
+    "UserPoolId": "eu-west-1_ssssssssssssss"
   }
 }
