@@ -17,7 +17,7 @@ namespace Asp.Net.Core.Cognito.Users.Configuration
             jsonConfigFile = configFile;
         }
 
-        private static string jsonConfigFile { get; set; } = "config/cognito_config.json";
+        private static string jsonConfigFile { get; set; } = "/config/cognito_config.json";
 
         /// <summary>
         ///   Setup ASP.NET service
